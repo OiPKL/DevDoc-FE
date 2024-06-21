@@ -63,5 +63,5 @@ export function signout() {
 
 // 회원가입 처리 함수
 export function signup(userDTO) {
-  return call("/auth/signup", "POST", userDTO);
+  return call("/auth/signup", "POST", userDTO, false);
 }
