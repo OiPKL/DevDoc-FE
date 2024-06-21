@@ -23,12 +23,12 @@ class SignUp extends React.Component {
     const username = data.get("username");
     const email = data.get("email");
     const password = data.get("password");
-    signup({ email: email, username: username, password: password }).then(
-      (response) => {
-        // 계정 생성 성공 시 login페이지로 리디렉트
-        window.location.href = "/login";
-      }
-    ).catch((error) => {
+    signup({ email: email, username: username, password: password })
+    .then(() => {
+      // 계정 생성 성공 시 login페이지로 리디렉트
+      window.location.href = "/login";
+    })
+    .catch((error) => {
       console.error("Signup failed:", error);
     });
   }
