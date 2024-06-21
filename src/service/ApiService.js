@@ -4,7 +4,7 @@ import { API_BASE_URL } from "../app-config";
 const ACCESS_TOKEN = "ACCESS_TOKEN";
 
 // API 호출 함수
-export function call(api, method, request) {
+export function call(api, method, request, requireAuth = false) {
   let headers = new Headers({
     "Content-Type": "application/json", // 요청 헤더 설정
   });
